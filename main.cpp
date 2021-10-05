@@ -7,9 +7,9 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     Interpreter * interpreter = new Interpreter();
-    Token token = new Token(TokenType::INTEGER, "5");
+    Token * token = new Token(TokenType::INTEGER, "5");
 
-    cout << *token << endl;
+    cout << token->to_string(*token) << endl;
 
     delete token;
     delete interpreter;
