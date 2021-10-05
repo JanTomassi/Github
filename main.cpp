@@ -6,10 +6,8 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    Interpreter * interpreter = new Interpreter();
-    Token * token = new Token(TokenType::INTEGER, "5");
-
-    cout << token->to_string(*token) << endl;
+    Interpreter * interpreter = new Interpreter("32+2");
+    TokenP token = new Token(TokenType::INTEGER, "5");
 
     delete token;
     delete interpreter;

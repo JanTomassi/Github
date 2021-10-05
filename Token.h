@@ -7,7 +7,7 @@
 
 using namespace std;
 
-enum class TokenType {INTEGER, PLUS};
+enum class TokenType {INTEGER, PLUS, ENDOFFILE};
 
 class Token
 {
@@ -21,6 +21,7 @@ public:
     friend ostream& operator<<(ostream& os, const Token& t);
     string to_string(const Token& t);
 };
+typedef Token* TokenP;
 
 ostream& operator<<(ostream& os, const Token& t)
 {
