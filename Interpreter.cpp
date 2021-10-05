@@ -1,4 +1,5 @@
 #include "Interpreter.h"
+#include "Token.h"
 
 Interpreter::Interpreter(string doc) : document(doc)
 {

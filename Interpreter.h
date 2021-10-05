@@ -1,5 +1,3 @@
-#include "Token.h"
-
 #ifndef _INC_INTERPRETER_P
 #define _INC_INTERPRETER_P
 
@@ -9,6 +7,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <queue>
+#include "Token.h"
 
 using namespace std;
 

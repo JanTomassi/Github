@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string.h>
-#include <sstream> 
+#include <sstream>
 
 using namespace std;
 
@@ -20,31 +20,6 @@ public:
     
     friend ostream& operator<<(ostream& os, const Token& t);
     string to_string(const Token& t);
-};
-typedef Token* TokenP;
-
-ostream& operator<<(ostream& os, const Token& t)
-{
-    os << "Type: " << (int)t.type << "\n"
-        << "Value: " << t.value;
-    return os;
-}
-string Token::to_string(const Token& t)
-{
-    ostringstream ss;
-    ss << "Type: " << (int)t.type << "\n"
-        << "Value: " << t.value;
-    return ss.str();
-}
-
-Token::Token(TokenType t, string s)
-{
-    type = t;
-    value = s;
-}
-
-Token::~Token()
-{
-}
+};typedef Token* TokenP;
 
 #endif
