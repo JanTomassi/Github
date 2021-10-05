@@ -13,10 +13,10 @@ class Token
 {
 private:
     string value;
-    TokenType type;
 public:
     Token(TokenType t, string s);
     ~Token();
+    TokenType type;
     
     friend ostream& operator<<(ostream& os, const Token& t);
     string to_string(const Token& t);

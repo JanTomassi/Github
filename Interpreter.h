@@ -14,19 +14,19 @@ using namespace std;
 class Interpreter
 {
 private:
-    string document;
-    queue<TokenP> tokens;
+    string script;
     unsigned long pos = 0;
     TokenP current_token = nullptr;
 
     //crea un Token avendo il documento in ingresso
     TokenP get_next_token();
-    TokenP init_queue();
+    void initQueue();
     //Funzione per calolare Token per interi più grandi di una cifra
     void calculateInt(string& cc, int i_pos);
 public:
     Interpreter(string doc);
     ~Interpreter();
+    queue<TokenP> tokens;
     exception readFileExeption() {
         throw out_of_range("Invalide operetion in Interpreter");
     }
