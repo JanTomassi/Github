@@ -24,7 +24,6 @@ TokenP Interpreter::get_next_token()
         string current_str;
         current_str.push_back(document[pos]);
         calculateInt(current_str, pos);
-        cout << current_str << endl;
         newToken = new Token(TokenType::INTEGER, current_str);
     }
     
